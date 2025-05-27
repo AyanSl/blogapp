@@ -2,6 +2,7 @@ import React from 'react'
 import Blog from "./compnents/blog"
 import Blogpost from "./compnents/blogpost"
 import Blogdetail from "./compnents/blogdetail"
+import Blogedit from "./compnents/blogedit"
 import { Route , Routes } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -14,7 +15,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Blog/>} /> 
         <Route path='/create' element={<Blogpost/>} /> 
-        <Route path='/blog/:id' element={<Blogdetail />} /> 
+        <Route path='/blog/:id' element={<Blogdetail />} />
+        <Route path='/blog/edit/:id' element={<Blogedit />} /> 
       </Routes>
       <ToastContainer />
     </>
